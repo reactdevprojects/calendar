@@ -23,7 +23,7 @@ const Calendar: React.FC<Props> = ({value = new Date(),onChange}) =>{
     const prevMonth =() => onChange && onChange(sub(value, {months:1}))
     const nextMonth = () =>onChange && onChange(add(value, {months:1}))
 
-    const prevYear = () =>onChange && onChange(add(value, {years:1}))
+    const prevYear = () =>onChange && onChange(sub(value, {years:1}))
     const nextYear = () =>onChange && onChange(add(value, {years:1}))
 
     const handleClickDate = (index: number) => {
